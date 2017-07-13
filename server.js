@@ -12,7 +12,6 @@ app.use(express.static('client/build'));
 
 io.on( "connection", function(socket) {
   socket.on("diary", (update) => {
-    console.log("from server at socket on", update)
     io.sockets.emit("diary", update)
   })
 })

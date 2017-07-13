@@ -21,17 +21,11 @@ class DocumentContainer extends React.Component {
 
 }
   receiveNew(newContent) {
-    console.log("recievenew", newContent)
     this.setState({pageContent: newContent})
-    console.log("page",this.state.pageContent)
   }
 
   makeChange(event) {
-    // var content = this.state.pageContent
-    // var newContent = event.target.value
-    // console.log("event", newContent)
     this.setState({ pageContent: event.target.value}) 
-    // console.log(this.state.pageContent)
     this.handleEmit(event.target.value)
   }
 

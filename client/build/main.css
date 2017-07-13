@@ -1,0 +1,16 @@
+:root {
+  --color1: #008744;
+  --color2: #0057e7;
+  --color3: #d62d20;
+  --color4: #ffa700;;
+}
+
+body {
+  background: #008744;
+}
+
+#text-area{
+  background-color: #0057e7;
+  color:#d62d20;
+  font-size: 33px;
+}

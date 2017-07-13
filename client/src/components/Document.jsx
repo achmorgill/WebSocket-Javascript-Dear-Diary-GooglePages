@@ -9,10 +9,10 @@ class Document extends React.Component {
   render() {
 
     return(
+        <div>
         <textarea id="text-area" rows="20" cols="50" name="text-box" form="usrForm" onChange={this.props.onFinishEdit} value={this.props.pageContent}>
-          
-
         </textarea>
+        </div>
       )
   }
 }
