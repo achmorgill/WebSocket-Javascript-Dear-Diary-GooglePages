@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 app.use(express.static('client/build'));
 
 io.on( "connection", function(socket) {
-  socket.on("essay", function(update) {
+  socket.on("essay", (update) => {
     io.sockets.emit("essay", update)
   })
 })

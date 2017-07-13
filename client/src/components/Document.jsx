@@ -1,12 +1,18 @@
 import React from 'react'
 
 class Document extends React.Component {
+
+  constructor(props) {
+    super(props)
+  }
+
   render() {
 
     return(
-      <div>
-      today is thursday - pub!!!
-      </div>
+        <textarea id="text-area" rows="20" cols="50" name="text-box" form="usrForm" onKeyUp={this.props.onFinishEdit}>
+          {this.props.pageContent}
+
+        </textarea>
       )
   }
 }
