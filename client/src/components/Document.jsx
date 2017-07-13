@@ -9,8 +9,8 @@ class Document extends React.Component {
   render() {
 
     return(
-        <textarea id="text-area" rows="20" cols="50" name="text-box" form="usrForm" onKeyUp={this.props.onFinishEdit}>
-          {this.props.pageContent}
+        <textarea id="text-area" rows="20" cols="50" name="text-box" form="usrForm" onChange={this.props.onFinishEdit} value={this.props.pageContent}>
+          
 
         </textarea>
       )

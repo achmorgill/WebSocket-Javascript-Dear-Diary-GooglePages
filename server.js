@@ -11,12 +11,13 @@ app.get('/', function (req, res) {
 app.use(express.static('client/build'));
 
 io.on( "connection", function(socket) {
-  socket.on("essay", (update) => {
-    io.sockets.emit("essay", update)
+  socket.on("diary", (update) => {
+    console.log("from server at socket on", update)
+    io.sockets.emit("diary", update)
   })
 })
 
-var server = app.listen(3000, function () {
+var server = http.listen(3000, function () {
   var host = server.address().address;
   var port = server.address().port;
 
